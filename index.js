@@ -1,5 +1,6 @@
 // Add in necessary packages
 const inquirer = require('inquirer');
+// fs and pull in the functions from shapes.js
 
 // Create on array of questions that the user can answer via the command line
 // Questions to ask include: text, color, and shape input, as well as shape color.
@@ -27,8 +28,19 @@ const questions = [
       },
   ]
 
-// Create a constructor function for the logo
+// Create a logo constructor function for the logo
 
 // Create a function to write the output to a .svg file
 
+// Create asynchronous function using promises including a new instance of the logo construction function
+// part of the function will have to gather the user's responses. 
+
+
 // Create a function to initialize the program
+// something to the extent of... 
+// function init() {
+//     console.log("Build your Logo by answering the following questions!");
+//     shapeBuilder();
+//   }
+  
+// init();

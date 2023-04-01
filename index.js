@@ -58,6 +58,30 @@ function shapeBuilder(logoData) {
     logo.textcolor = logoData.textColor
     logo.text = logoData.logoText
     logo.shapetype = logoData.shapeType
+    
+    switch(shapetype){
+        case "Circle":
+            fileName = 'logo.svg'
+            Shape = "Circle"
+            console.log(Shape)
+            shapeString = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"><circle cx="50%" cy="50%" r="100" height="100%" width="100%" fill="${logo.color}"></circle><text x="150" y="125" font-size="60" text-anchor="middle" fill="${logo.textcolor}">${logo.text}</text></svg>`
+            return svgFile(fileName, shapeString)
+        break; 
+
+        case "Square":
+            fileName = 'logo.svg'
+            Shape = "Square"
+            console.log(Shape)
+            return svgFile(fileName, shapeString)
+        break;
+
+        case "Triangle":
+            fileName = 'logo.svg'
+            Shape = "Triangle"
+            console.log(Shape)
+            return svgFile(fileName, shapeString)
+        break;
+    }
 
 }
 

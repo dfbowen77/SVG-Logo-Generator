@@ -58,6 +58,11 @@ function shapeBuilder(logoData) {
     logo.textcolor = logoData.textColor
     logo.text = logoData.logoText
     logo.shapetype = logoData.shapeType
+
+    if (logo.text.length > 3 || logo.text.length === 0) {
+        console.log("Your logo must have between 1 and 3 characters. Try again!")
+        return init()
+    } 
     
     switch(shapetype){
         case "Circle":

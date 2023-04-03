@@ -68,22 +68,33 @@ function shapeBuilder(logoData) {
         case "Circle":
             fileName = 'logo.svg'
             Shape = "Circle"
-            console.log(Shape)
-            shapeString = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"><circle cx="50%" cy="50%" r="100" height="100%" width="100%" fill="${logo.color}"></circle><text x="150" y="125" font-size="60" text-anchor="middle" fill="${logo.textcolor}">${logo.text}</text></svg>`
+            const circle = new Circle();
+            circle.setColor(logo.color)
+            circle.setTextColor(logo.textcolor)
+            circle.setText(logo.text)
+            shapeString = circle.render()
             return svgFile(fileName, shapeString)
         break; 
 
         case "Square":
             fileName = 'logo.svg'
             Shape = "Square"
-            console.log(Shape)
+            const square = new Square();
+            square.setColor(logo.color)
+            square.setTextColor(logo.textcolor)
+            square.setText(logo.text)
+            shapeString = square.render()
             return svgFile(fileName, shapeString)
         break;
 
         case "Triangle":
             fileName = 'logo.svg'
             Shape = "Triangle"
-            console.log(Shape)
+            const triangle = new Triangle();
+            triangle.setColor(logo.color)
+            triangle.setTextColor(logo.textcolor)
+            triangle.setText(logo.text)
+            shapeString = triangle.render()
             return svgFile(fileName, shapeString)
         break;
     }
